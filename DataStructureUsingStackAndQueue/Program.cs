@@ -6,7 +6,11 @@ namespace DataStructureUsingStackAndQueue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the stack And Queue program");
+            LinkedListStack linkedListStack = new LinkedListStack();
+            linkedListStack.push(70);
+            linkedListStack.push(30);
+            linkedListStack.push(56);
+            linkedListStack.Display();
         }
     }
 }
