@@ -81,7 +81,7 @@ namespace DataStructureUsingStackAndQueue
             Node temp = this.top;
             while (temp != null)
             {
-                Console.WriteLine("element in stack = " + temp.data);
+                Console.WriteLine("elements in stack = " + temp.data);
                 temp = temp.next;
             }
         }
