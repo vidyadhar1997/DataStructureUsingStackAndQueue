@@ -28,7 +28,22 @@ namespace DataStructureUsingStackAndQueue
                 }
                 temp.next = node;
             }
-            Console.WriteLine("\n inserted into queue" + node.data);
+            Console.WriteLine("\n inserted into queue = " + node.data);
+        }
+
+        /// <summary>
+        /// Dequeues this element from stack.
+        /// </summary>
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                head = head.next;
+            }
         }
 
         /// <summary>
