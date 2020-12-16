@@ -36,6 +36,44 @@ namespace DataStructureUsingStackAndQueue
         }
 
         /// <summary>
+        /// Peek methode return the top element in stack.
+        /// </summary>
+        internal void peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("stack is empty");
+            }
+            Console.WriteLine("\n is in the top of stack = " + this.top.data);
+        }
+
+        /// <summary>
+        /// Pop methode remove and return the top element.
+        /// </summary>
+        internal void pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("stack is empty \n deletion is not possible");
+            }
+            Console.WriteLine("\n Pop out elememnt is = " + this.top.data);
+            this.top = this.top.next;
+        }
+
+        /// <summary>
+        /// Determines whether this stack is empty or not.
+        /// </summary>
+        internal void isEmpty()
+        {
+            while (this.top != null)
+            {
+                peek();
+                pop();
+            }
+            Console.WriteLine("Stack is empty");
+        }
+
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         internal void Display()
@@ -43,7 +81,7 @@ namespace DataStructureUsingStackAndQueue
             Node temp = this.top;
             while (temp != null)
             {
-                Console.WriteLine("Inserted into the stack Successfully = " + temp.data);
+                Console.WriteLine("element in stack = " + temp.data);
                 temp = temp.next;
             }
         }
